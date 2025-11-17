@@ -1,0 +1,18 @@
+package com.sistemaAcademico.sistema_academico_backend.modelo;
+
+import org.springframework.security.core.GrantedAuthority;
+//Clase modelo que define los roles el sistema como autoridades de acceso
+public class Authority implements GrantedAuthority {
+
+    private String authority;
+
+    public Authority(String authority) {
+        this.authority = authority;
+    }
+
+    @Override
+    public String getAuthority() {
+        return this.authority;
+    }
+
+}
