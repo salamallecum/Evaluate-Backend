@@ -156,7 +156,7 @@ public class PreguntaController {
         //Recorremos toda la lista de preguntas
         for (Pregunta p : preguntas) {
             Pregunta pregunta = preguntaService.listarPregunta(p.getId());
-            //Validamos si la respuesta dad por el usuario es igual a la respuesta corrrecta
+            //Validamos si la respuesta dada por el usuario es igual a la respuesta correcta
             if(pregunta.getRespuesta().equals(p.getRespuestaDada())){
                 respuestaCorrectas++;
                 double puntos = Double.parseDouble(preguntas.get(0).getExamen().getPuntosMaximos()) / preguntas.size();
